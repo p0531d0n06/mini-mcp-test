@@ -24,3 +24,11 @@ The MCP specification defines the portfolio of message types that can be transfe
 6. Now the server with the functionality created can call the MCP Client to run the tool which sends a CallToolRequest to the MCP Server and can now process the execution and successfully sends the request to Github (following the example from 1.)
 7. The response from Github is brought back to the the MCP Server which then brings it back to the MCP Client via a CallToolResult
 8. The user server then sends the toolResult to Claude to transform and Claude responds to the user server and concludes with a neat response to the user
+
+## Resources
+
+- Resources allow the MCP Server to expose data to the client
+- Kind of similar to an HTTP Server GET request handler
+- Can return any type of data
+    - We set the 'mim_type' to give the client a hint to the return data type
+- Two types: **Direct** & **Templated** 
